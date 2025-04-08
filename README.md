@@ -2,7 +2,9 @@
 
 To Install:
 
-```git clone https://github.com/kenshin-kuntarou ~/.config/nvim/```
+```
+git clone https://github.com/kenshin-kuntarou ~/.config/nvim/
+```
 
 Plugins:
 
@@ -21,4 +23,6 @@ Plugins:
 
 Install Plugins:
 
-```MasonInstallAll```
+```
+MasonInstallAll
+```
