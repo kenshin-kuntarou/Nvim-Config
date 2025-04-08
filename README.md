@@ -3,7 +3,7 @@
 To Install:
 
 ```
-git clone https://github.com/kenshin-kuntarou ~/.config/nvim/
+git clone https://github.com/kenshin-kuntarou/Nvim-Config ~/.config/nvim/
 ```
 
 Plugins:
