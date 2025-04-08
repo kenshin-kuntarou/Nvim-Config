@@ -40,6 +40,12 @@ return {
       vim.cmd [[silent! GoInstallDeps]]
     end
   },
+ 
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = true, -- Isso carrega a configuração padrão
+  }
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
