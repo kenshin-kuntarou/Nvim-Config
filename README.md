@@ -23,27 +23,27 @@ Plugins:
 * Stylua 
 * Solargraph
 
-Install languages:
+### Install languages:
 
-Python:
+**Python:**
 
 ```
 sudo pacman -S python3 npm
 ```
 
-Go:
+**Go:**
 
 ```
 sudo pacman -S go gpls
 ```
 
-Ruby:
+**Ruby:**
 
 ```
 sudo pacman -S ruby
 ```
 
-Install Plugins:
+### Install Plugins:
 
 ```
 MasonInstallAll
