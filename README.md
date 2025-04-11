@@ -23,6 +23,26 @@ Plugins:
 * Stylua 
 * Solargraph
 
+Install languages:
+
+Python:
+
+```
+sudo pacman -Ss python3 npm
+```
+
+Go:
+
+```
+sudo pacman -Ss go gpls
+```
+
+Ruby:
+
+```
+sudo pacman -Ss ruby
+```
+
 Install Plugins:
 
 ```
