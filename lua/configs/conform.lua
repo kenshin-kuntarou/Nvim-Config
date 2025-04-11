@@ -3,6 +3,7 @@ local options = {
     lua = { "stylua" },
     -- css = { "prettier" },
     -- html = { "prettier" },
+    ruby = { "rubocop", "rufo" },  -- Adicione esta linha para Ruby
   },
 
   -- format_on_save = {

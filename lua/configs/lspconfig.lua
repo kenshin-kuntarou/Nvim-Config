@@ -11,7 +11,7 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 local util = require("lspconfig.util")
 
-local servers = { "html", "cssls", "pyright", "ruff", "gopls" }
+local servers = { "html", "cssls", "pyright", "ruff", "gopls", "solargraph" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 lspconfig.pyright.setup({
@@ -53,6 +53,29 @@ lspconfig.gopls.setup({
   },
 })
 
+lspconfig.solargraph.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    solargraph = {
+      diagnostics = true,
+      completion = true,
+      formatting = true,
+        useBundler = false,  -- Altere para true se usar Bundler
+        -- Configurações adicionais importantes:
+        initializationOptions = {
+          formatting = true,
+        },
+        commandPath = vim.fn.exepath('solargraph'),  -- Garante o caminho correto
+    },
+  },
+  init_options = {
+    formatting = true
+  },
+  flags = {
+    debounce_text_changes = 150,
+  }
+})
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

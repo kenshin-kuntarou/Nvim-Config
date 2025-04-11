@@ -45,7 +45,34 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     config = true, -- Isso carrega a configuração padrão
-  }
+  },
+
+  {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    opts = require "configs.conform",
+  },
+  -- ... outros plugins existentes ...
+
+  -- Adicione estes novos plugins para Ruby:
+  {
+    "ruby-formatter/rufo-vim", -- Formatter para Ruby
+    ft = "ruby",
+  },
+  {
+    "jlcrochet/vim-ruby", -- Melhor suporte para Ruby
+    ft = "ruby",
+  },
+  {
+    "tpope/vim-bundler", -- Suporte para Bundler
+    ft = "ruby",
+  },
+  {
+    "tpope/vim-rails", -- Suporte para Rails
+    ft = "ruby",
+  },
+}
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
@@ -55,4 +82,3 @@ return {
   -- 		},
   -- 	},
   -- },
-}

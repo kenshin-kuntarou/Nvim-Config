@@ -11,6 +11,10 @@ null_ls.setup({
     null_ls.builtins.formatting.golines.with({  -- Quebra de linhas longas
       extra_args = { "--max-len=80" },    
     }),
+
+    null_ls.builtins.formatting.rufo,
+    null_ls.builtins.diagnostics.rubocop,
+    null_ls.builtins.formatting.rubocop,
   },
 })
 
