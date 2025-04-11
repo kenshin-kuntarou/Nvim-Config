@@ -28,19 +28,19 @@ Install languages:
 Python:
 
 ```
-sudo pacman -Ss python3 npm
+sudo pacman -S python3 npm
 ```
 
 Go:
 
 ```
-sudo pacman -Ss go gpls
+sudo pacman -S go gpls
 ```
 
 Ruby:
 
 ```
-sudo pacman -Ss ruby
+sudo pacman -S ruby
 ```
 
 Install Plugins:
