@@ -14,7 +14,7 @@ end
 local function file_exists()
   local file = vim.fn.expand("%")
   if vim.fn.filereadable(file) == 0 then
-    notify("Arquivo não encontrado: " .. file, vim.log.levels.ERROR)
+    notify("File not found: " .. file, vim.log.levels.ERROR)
     return false
   end
   return true
@@ -23,7 +23,7 @@ end
 -- 1. Execução com ToggleTerm (terminal flutuante) - Versão Corrigida
 map("n", "<leader>rp", function()
   if vim.bo.filetype ~= "python" then
-    notify("Não é um arquivo Python!", vim.log.levels.ERROR)
+    notify("It's not a Python file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -35,12 +35,12 @@ map("n", "<leader>rp", function()
     close_on_exit = false,
   })
   python_term:toggle()
-  notify("Executando Python: " .. vim.fn.expand("%"))
+  notify("Executing Python: " .. vim.fn.expand("%"))
 end, { desc = "Run Python (interactive)" })
 
 map("n", "<leader>rg", function()
   if vim.bo.filetype ~= "go" then
-    notify("Não é um arquivo Go!", vim.log.levels.ERROR)
+    notify("It's not a Go file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -52,13 +52,13 @@ map("n", "<leader>rg", function()
     close_on_exit = false,
   })
   go_term:toggle()
-  notify("Executando Go: " .. vim.fn.expand("%"))
+  notify("Executing Go: " .. vim.fn.expand("%"))
 end, { desc = "Run Go (interactive)" })
 
 -- 2. Execução rápida (terminal externo)
 map("n", "<leader>rr", function()
   if vim.bo.filetype ~= "python" then
-    notify("Não é um arquivo Python!", vim.log.levels.ERROR)
+    notify("It's not a Python file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -67,7 +67,7 @@ end, { desc = "Quick Run Python (external)" })
 
 map("n", "<leader>rR", function()
   if vim.bo.filetype ~= "go" then
-    notify("Não é um arquivo Go!", vim.log.levels.ERROR)
+    notify("It's not a Go file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -83,7 +83,7 @@ end, { desc = "Toggle terminal" })
 map("n", "<leader>rx", function()
   local term = require("toggleterm.terminal")
   term.get_all():close()
-  notify("Terminais fechados", vim.log.levels.INFO)
+  notify("Shells closed", vim.log.levels.INFO)
 end, { desc = "Close all terminals" })
 
 -- Ruby execution
@@ -95,7 +95,7 @@ end
 local function file_exists()
   local file = vim.fn.expand("%")
   if vim.fn.filereadable(file) == 0 then
-    notify("Arquivo não encontrado: " .. file, vim.log.levels.ERROR)
+    notify("File not found: " .. file, vim.log.levels.ERROR)
     return false
   end
   return true
@@ -104,7 +104,7 @@ end
 -- 1. Execução com ToggleTerm (terminal flutuante)
 map("n", "<leader>rr", function() -- Ruby
   if vim.bo.filetype ~= "ruby" then
-    notify("Não é um arquivo Ruby!", vim.log.levels.ERROR)
+    notify("It's not a Ruby file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -116,12 +116,12 @@ map("n", "<leader>rr", function() -- Ruby
     close_on_exit = false,
   })
   ruby_term:toggle()
-  notify("Executando Ruby: " .. vim.fn.expand("%"))
+  notify("Executing Ruby: " .. vim.fn.expand("%"))
 end, { desc = "Run Ruby (interactive)" })
 
 map("n", "<leader>rg", function() -- Go
   if vim.bo.filetype ~= "go" then
-    notify("Não é um arquivo Go!", vim.log.levels.ERROR)
+    notify("It's not a Go file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -133,13 +133,13 @@ map("n", "<leader>rg", function() -- Go
     close_on_exit = false,
   })
   go_term:toggle()
-  notify("Executando Go: " .. vim.fn.expand("%"))
+  notify("Executing Go: " .. vim.fn.expand("%"))
 end, { desc = "Run Go (interactive)" })
 
 -- 2. Execução rápida (terminal externo)
 map("n", "<leader>rR", function() -- Ruby rápido
   if vim.bo.filetype ~= "ruby" then
-    notify("Não é um arquivo Ruby!", vim.log.levels.ERROR)
+    notify("It's not a Ruby file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -148,7 +148,7 @@ end, { desc = "Quick Run Ruby (external)" })
 
 map("n", "<leader>rG", function() -- Go rápido
   if vim.bo.filetype ~= "go" then
-    notify("Não é um arquivo Go!", vim.log.levels.ERROR)
+    notify("It's not a Go file!", vim.log.levels.ERROR)
     return
   end
   if not file_exists() then return end
@@ -163,5 +163,5 @@ end, { desc = "Toggle terminal" })
 map("n", "<leader>rx", function()
   local term = require("toggleterm.terminal")
   term.get_all():close()
-  notify("Terminais fechados", vim.log.levels.INFO)
+  notify("Shells closed", vim.log.levels.INFO)
 end, { desc = "Close all terminals" })
