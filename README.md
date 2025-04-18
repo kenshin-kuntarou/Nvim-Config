@@ -58,8 +58,6 @@ sudo apt install -S ruby
 MasonInstallAll
 ```
 
-Or:
-
 ```
 MasonInstall black css-lsp goimport golines gopls html-lsp lua-language-server mypy pyright ruff rufo rubocop stylua solargraph 
 ```
