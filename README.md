@@ -30,17 +30,26 @@ Python:
 ```
 sudo pacman -S python3 npm
 ```
-
+```
+sudo apt install python3 npm
+```
 Go:
 
 ```
 sudo pacman -S go gpls
 ```
 
+```
+sudo apt install go gpls
+```
 Ruby:
 
 ```
 sudo pacman -S ruby
+```
+
+```
+sudo apt install -S ruby
 ```
 
 ### Install Plugins:
