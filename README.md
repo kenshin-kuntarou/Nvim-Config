@@ -36,11 +36,11 @@ sudo apt install python3 npm
 Go:
 
 ```
-sudo pacman -S go gpls
+sudo pacman -S go gopls
 ```
 
 ```
-sudo apt install go gpls
+sudo apt install golang gopls
 ```
 Ruby:
 
