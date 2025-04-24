@@ -5,14 +5,6 @@ To Install:
 ```
 mv ~/.config/nvim ~/.config/nvim.bkp
 git clone https://github.com/kenshin-kuntarou/Nvim-Config ~/.config/nvim/
-# Nvim-Config
-```
-
-To Install:
-
-```
-mv 
-git clone https://github.com/kenshin-kuntarou/Nvim-Config ~/.config/nvim/
 ```
 
 Plugins:
