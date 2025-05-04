@@ -5,8 +5,6 @@ To Install:
 ```
 mv ~/.config/nvim ~/.config/nvim.bkp
 git clone https://github.com/kenshin-kuntarou/Nvim-Config ~/.config/nvim/
-
-
 ```
 
 Plugins:
@@ -42,7 +40,6 @@ Go:
 
 ```
 sudo pacman -S go gopls
-
 ```
 
 ```
@@ -57,7 +54,6 @@ sudo pacman -S ruby
 
 ```
 sudo apt install -S ruby
-
 ```
 
 ### Install Plugins:
