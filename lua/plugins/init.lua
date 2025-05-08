@@ -71,6 +71,12 @@ return {
     "tpope/vim-rails", -- Suporte para Rails
     ft = "ruby",
   },
+  {
+    "ellisonleao/carbon-now.nvim",
+    lazy = true,
+    cmd = "CarbonNow",
+    opts = {},
+  },
 }
 
   -- {
