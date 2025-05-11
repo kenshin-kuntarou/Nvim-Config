@@ -65,3 +65,20 @@ MasonInstallAll
 ```
 MasonInstall black css-lsp goimport golines gopls html-lsp lua-language-server mypy pyright ruff rufo rubocop stylua solargraph 
 ```
+---
+
+### Comands:
+
+Start shell Python:
+
+`<leader> + r + p`
+
+Start shell Go:
+
+`<leader> + r + g`
+
+Start shell Ruby:
+
+`<leader> + r + r`
+
+---
