@@ -75,24 +75,6 @@ return {
     "ellisonleao/carbon-now.nvim",
     lazy = true,
     cmd = "CarbonNow",
-    opts = {},
-  },
-  {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    opts = {
-      -- Adicione suas opções aqui, se desejar
-    },
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      -- Opcional:
-      "rcarriga/nvim-notify",
-    }
-  },
-  {
-    "ellisonleao/carbon-now.nvim",
-    lazy = true,
-    cmd = "CarbonNow",
     options = {
       paddingVertical = "0px",
       paddingHorizontal = "0px",
@@ -119,26 +101,6 @@ return {
       highlights = nil,
     },
   },
-  {
-    "frankroeder/parrot.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-    require("parrot").setup({
-      providers = {
-        perplexity = {
-          enabled = true,
-          -- aqui você pode configurar sua chave de API se necessário
-        },
-        -- outros provedores podem ser ativados conforme desejar
-      },
-      -- outras configurações opcionais
-    })
-    end,
-    cmd = { "Parrot" },
-    lazy = true,
-  }
 }
 
 -- {
