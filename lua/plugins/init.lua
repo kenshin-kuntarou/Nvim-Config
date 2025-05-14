@@ -22,7 +22,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "configs.lspconfig"
+    require "configs.lspconfig"
     end,
   },
 
@@ -34,13 +34,13 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     config = function()
-      require("gopher").setup()
+    require("gopher").setup()
     end,
     build = function ()
-      vim.cmd [[silent! GoInstallDeps]]
+    vim.cmd [[silent! GoInstallDeps]]
     end
   },
- 
+
   {
     "akinsho/toggleterm.nvim",
     version = "*",
@@ -75,6 +75,24 @@ return {
     "ellisonleao/carbon-now.nvim",
     lazy = true,
     cmd = "CarbonNow",
+    opts = {},
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- Adicione suas opções aqui, se desejar
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      -- Opcional:
+      "rcarriga/nvim-notify",
+    }
+  },
+  {
+    "ellisonleao/carbon-now.nvim",
+    lazy = true,
+    cmd = "CarbonNow",
     options = {
       paddingVertical = "0px",
       paddingHorizontal = "0px",
@@ -101,14 +119,34 @@ return {
       highlights = nil,
     },
   },
+  {
+    "frankroeder/parrot.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+    require("parrot").setup({
+      providers = {
+        perplexity = {
+          enabled = true,
+          -- aqui você pode configurar sua chave de API se necessário
+        },
+        -- outros provedores podem ser ativados conforme desejar
+      },
+      -- outras configurações opcionais
+    })
+    end,
+    cmd = { "Parrot" },
+    lazy = true,
+  }
 }
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+-- {
+-- 	"nvim-treesitter/nvim-treesitter",
+-- 	opts = {
+-- 		ensure_installed = {
+-- 			"vim", "lua", "vimdoc",
+--      "html", "css"
+-- 		},
+-- 	},
+-- },
