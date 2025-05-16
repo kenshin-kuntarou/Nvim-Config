@@ -77,8 +77,39 @@ return {
     cmd = "CarbonNow",
     opts = {},
   },
-}
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup{}
+      -- Mapear atalho para abrir busca de arquivos
+      vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
+    end
+  },
 
+  -- Neo-tree para explorer de arquivos
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("neo-tree").setup{}
+      vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>Neotree toggle<cr>', { noremap = true })
+    end
+  },
+  {
+    "folke/tokyonight.nvim",
+  },
+  {
+    "nvim-lua/plenary.nvim",
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+  },
+  {
+    "kyazdani42/nvim-web-devicons",
+  },
+}
 -- {
 -- 	"nvim-treesitter/nvim-treesitter",
 -- 	opts = {
