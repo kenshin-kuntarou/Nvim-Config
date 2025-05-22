@@ -4,7 +4,7 @@ To Install:
 
 ```
 mv ~/.config/nvim ~/.config/nvim.bkp
-git clone https://github.com/kenshin-kuntarou/Nvim-Config ~/.config/nvim/
+git clone https://github.com/tenshin-tenko/Nvim-Config ~/.config/nvim/
 ```
 
 Plugins:
