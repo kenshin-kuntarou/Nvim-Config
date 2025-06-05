@@ -165,3 +165,9 @@ map("n", "<leader>rx", function()
   term.get_all():close()
   notify("Shells closed", vim.log.levels.INFO)
 end, { desc = "Close all terminals" })
+
+-- 4. Opener
+map("n", "<leader>o", function()
+  vim.cmd("Telescope opener")
+end, { desc = "Abrir projetos com opener" })
+

@@ -109,6 +109,14 @@ return {
   {
     "kyazdani42/nvim-web-devicons",
   },
+  {
+    "willthbill/opener.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" }, -- recomendado
+    config = function()
+      require('telescope').load_extension("opener")
+      require('opener').setup()
+    end,
+  },
 }
 -- {
 -- 	"nvim-treesitter/nvim-treesitter",
